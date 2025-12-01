@@ -61,15 +61,26 @@
         <button type="submit">Créer la forme</button>
     </form>
 
-    <div id="canvasContainer">
-         <ul id="list" style="height: 100%;"> </ul>
-    </div>
+    
 
+    <div id="canvasWrapper">
+        <div id="topbar">
+            <button type="button" id="reset"> Reset </button>
+            <button id="capture">Exporter en image</button>
+        </div>
+
+         
+        
+        <div id="canvasContainer">
+            <ul id="list" style="height: 100%;"> </ul>
+        </div>
+    </div>
    
     <div id="data-list">
         <ul id="data-list-ul"> </ul>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script type="module" src="script.js"></script>
 </body>
 </html>

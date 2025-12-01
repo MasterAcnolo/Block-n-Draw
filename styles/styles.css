@@ -65,14 +65,70 @@ body{
     background-color: #555;
 }
 
+#canvasWrapper{
+    align-self: center;
+    justify-self: center;
+}
+
+#topbar{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+#reset {
+    background: #ff3b30;
+    justify-self: center;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+#reset:hover {
+    background: #e33228;
+    transform: scale(1.05);
+}
+
+#reset:active {
+    background: #c62820;
+}
+
+#capture {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* vert moderne */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#capture:hover {
+    background-color: #45a049; /* un peu plus foncé au hover */
+    transform: scale(1.05);
+}
+
+#capture:active {
+    transform: scale(0.95);
+}
+
+
 #canvasContainer {
     width: 900px;
     height: 500px;
     border: 2px solid #333;
     background-color: #fff;
 
-    align-self: center;
-    justify-self: center;
+   
 
     overflow: hidden;
 

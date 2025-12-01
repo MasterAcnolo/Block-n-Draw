@@ -11,6 +11,8 @@ const listElement = document.getElementById(listID);
 const form = document.getElementById("formes");
 const DataDiv = document.getElementById("data-list-ul");
 
+const resetButton = document.getElementById("reset");
+
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -48,4 +50,23 @@ form.addEventListener("submit", function(event) {
 
     li.textContent = ` ${name} - Parent: ${parentId} | ${length}px x ${height}px \n Position: ${posX} / ${posY} | ${color} | Area: ${getArea(type, length, height)}cm² | Périmètre: ${getPerimeter(type, length, height)}cm `
     DataDiv.appendChild(li)
+});
+
+resetButton.addEventListener("click", function(){
+    listElement.innerHTML = "";
+    DataDiv.innerHTML = "";
+});
+
+document.getElementById("capture").addEventListener("click", () => {
+    const target = document.getElementById("canvasContainer");
+
+    html2canvas(target).then(canvas => {
+        const imgURL = canvas.toDataURL("image/png");
+
+        // Téléchargement auto
+        const link = document.createElement("a");
+        link.href = imgURL;
+        link.download = "dessin.png";
+        link.click();
+    });
 });
