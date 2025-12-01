@@ -1,0 +1,102 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    background: #696969;
+    background: radial-gradient(circle, rgb(211, 211, 211) 0%, rgb(225, 225, 225) 38%);
+}
+
+/* Formulaire container */
+#formes {
+    max-width: 400px;
+    margin: 30px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    align-self: flex-start;
+}
+
+*{
+    list-style: none;
+}
+
+/* Chaque champ */
+#formes div {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+#formes label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs et select */
+#formes input[type="text"],
+#formes input[type="number"],
+#formes input[type="color"],
+#formes select {
+    width: 100%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Bouton */
+#formes button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#formes button:hover {
+    background-color: #555;
+}
+
+#canvasContainer {
+    width: 900px;
+    height: 500px;
+    border: 2px solid #333;
+    background-color: #fff;
+
+    align-self: center;
+    justify-self: center;
+
+    overflow: hidden;
+
+    /* Quadrillage */
+    background-image:
+    linear-gradient(to right, #ccc 1px, transparent 1px),
+    linear-gradient(to bottom, #ccc 1px, transparent 1px);
+    background-size: 20px 20px; /* taille des carreaux */
+    position: relative; /* pour placer les formes avec absolute */
+}
+
+#data-list{
+    justify-self: flex-end;
+    background-color: rgb(46, 46, 46);
+    border-radius: 10px;
+    width: 280px;
+    margin: 30px;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-height: 600px;
+    overflow-y:auto;
+}
+
+#data-list-ul{
+    line-height: 2;
+    margin-left: -10%;
+}
